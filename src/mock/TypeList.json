@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Fast charger",
+        "value": "fast"
+    },
+    {
+        "label": "Standard charger",
+        "value": "standard"
+    },
+    {
+        "label": "Slow charger",
+        "value": "slow"
+    }
+]

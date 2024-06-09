@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "location": "Parkside avenue",
+        "type": "Fast",
+        "status": "Available",
+        "image": "https://media.istockphoto.com/id/1393199281/de/foto/ladestationen-f%C3%BCr-elektroautos-auf-einem-parkplatz.jpg?s=2048x2048&w=is&k=20&c=hqtDEe43RztBIUpTuOscuV4lZP4B-yFBvmcpVt9-YDw=",
+        "isFav": true
+    },
+    {
+        "id": "2",
+        "location": "Ring street",
+        "type": "Fast",
+        "status": "Offline",
+        "image": "https://media.istockphoto.com/id/1393199281/de/foto/ladestationen-f%C3%BCr-elektroautos-auf-einem-parkplatz.jpg?s=2048x2048&w=is&k=20&c=hqtDEe43RztBIUpTuOscuV4lZP4B-yFBvmcpVt9-YDw=",
+        "isFav": true
+    },
+    {
+        "id": "3",
+        "location": "Riverground str",
+        "type": "Standard",
+        "status": "Occupied",
+        "image": "https://media.istockphoto.com/id/1387159408/de/foto/ev-ladestation.jpg?s=1024x1024&w=is&k=20&c=mF3vwg3v45_Z8HwQ4p2VxlVEOWh5kte6UjEEUlEn3IA=",
+        "isFav": false
+    },
+    {
+        "id": "4",
+        "location": "Moose Strasse",
+        "type": "Slow",
+        "status": "Offline",
+        "image": "https://media.istockphoto.com/id/1330589502/de/foto/ladestation-f%C3%BCr-elektrofahrzeuge.jpg?s=1024x1024&w=is&k=20&c=I8_-rN194D8Mb1SJXTltmbx9b882AZIcHXlNpJXutOo=",
+        "isFav": false
+    },
+    {
+        "id": "5",
+        "location": "Elden woods",
+        "type": "Standard",
+        "status": "Available",
+        "image": "https://media.istockphoto.com/id/1354075252/de/foto/frau-mit-handy-w%C3%A4hrend-sie-auf-elektroauto-auf-dem-parkplatz-aufladen.jpg?s=1024x1024&w=is&k=20&c=ImFywsbcgUHiILcc8XFLTTll4Q9LzBKAbiYATiyJDzs=",
+        "isFav": true
+    },
+    {
+        "id": "6",
+        "location": "Ridgerton Av",
+        "type": "Fast",
+        "status": "Offline",
+        "image": "https://images.pexels.com/photos/2449452/pexels-photo-2449452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=",
+        "isFav": false
+    }
+]
