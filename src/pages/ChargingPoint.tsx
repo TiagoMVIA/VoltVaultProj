@@ -14,11 +14,11 @@ const ChargingPoint = () => {
     const route = useRoute();
     const navigation: any = useNavigation();
 
-    const [location, setLocation] = useState("");
-    const [status, setStatus] = useState("");
-    const [showType, setShowType] = useState(false);
-    const [showStatus, setShowStatus] = useState(false);
-    const [type, setType] = useState("");
+    const [location, setLocation] = useState<string>("");
+    const [status, setStatus] = useState<string>("");
+    const [showType, setShowType] = useState<boolean>(false);
+    const [showStatus, setShowStatus] = useState<boolean>(false);
+    const [type, setType] = useState<string>("");
 
     const handleAddChargingPoint = async () => {
         const db = await getDBConnection();
@@ -28,9 +28,9 @@ const ChargingPoint = () => {
 
     useFocusEffect(
         React.useCallback(() => {
-            setStatus('')
-            setType('')
-            setLocation('')
+            setStatus('');
+            setType('');
+            setLocation('');
         }, [])
     );
 
@@ -49,6 +49,7 @@ const ChargingPoint = () => {
                 />
                 <View style={styles.dropdown}>
                     <DropDown
+                        key={`type-${type}`}
                         label={"Type"}
                         mode={"outlined"}
                         visible={showType}
@@ -60,6 +61,7 @@ const ChargingPoint = () => {
                     />
                 </View>
                 <DropDown
+                    key={`status-${status}`}
                     label={"Status"}
                     mode={"outlined"}
                     visible={showStatus}
