@@ -6,7 +6,6 @@ import { useRoute, useNavigation, useFocusEffect } from '@react-navigation/nativ
 import DropDown from 'react-native-paper-dropdown';
 import TypeList from '../mock/TypeList.json';
 import StatusList from '../mock/StatusList.json';
-import { getDBConnection, addChargingPoint } from '../database/Database';
 
 LogBox.ignoreLogs(['Warning: TextInput.Icon: Support for defaultProps']);
 
@@ -20,10 +19,8 @@ const ChargingPoint = () => {
     const [showStatus, setShowStatus] = useState<boolean>(false);
     const [type, setType] = useState<string>("");
 
-    const handleAddChargingPoint = async () => {
-        const db = await getDBConnection();
-        await addChargingPoint(db, location, type, status);
-        navigation.navigate('Home');
+    const handleAddChargingPoint = () => {
+        console.log('handleAddCHaringPoint')
     };
 
     useFocusEffect(

@@ -4,21 +4,13 @@ import { Card, Title, Paragraph } from 'react-native-paper';
 import MainView from '../components/MainView';
 import FavIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useFocusEffect } from '@react-navigation/native';
-import { getDBConnection, getChargingPoints, updateFavoriteStatus } from '../database/Database';
 
 const FavList = () => {
     const [favoriteItems, setFavoriteItems] = useState<any>([]);
     const [refreshing, setRefreshing] = useState(false);
 
-    const fetchFavoriteItems = async () => {
-        try {
-            const db = await getDBConnection();
-            const storedChargingPoints = await getChargingPoints(db);
-            const favoriteItems = storedChargingPoints.filter(item => item.isFav);
-            setFavoriteItems(favoriteItems);
-        } catch (error) {
-            console.error("Error fetching favorite items:", error);
-        }
+    const fetchFavoriteItems = () => {
+        console.log('bd')
     };
 
     useEffect(() => {

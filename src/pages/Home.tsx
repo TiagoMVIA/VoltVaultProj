@@ -22,12 +22,6 @@ import {
 import MainView from '../components/MainView';
 import BottomSheet from '../components/BottomSheet';
 import FavIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {
-  getDBConnection,
-  createTable,
-  getChargingPoints,
-  updateFavoriteStatus,
-} from '../database/Database';
 
 type ChargingPoint = {
   id: string;
@@ -57,24 +51,12 @@ const Home: React.FC = () => {
     }, [])
   );
 
-  const onRefresh = async () => {
-    setRefreshing(true);
-    const db = await getDBConnection();
-    const storedChargingPoints = await getChargingPoints(db);
-    setChargingPoints(storedChargingPoints);
-    setFilteredData(storedChargingPoints);
-    setRefreshing(false);
+  const onRefresh = () => {
+    console.log('db')
   };
 
   useEffect(() => {
-    const initializeDB = async () => {
-      const db = await getDBConnection();
-      await createTable(db);
-      const storedChargingPoints = await getChargingPoints(db);
-      setChargingPoints(storedChargingPoints);
-      setFilteredData(storedChargingPoints);
-    };
-    initializeDB();
+    console.log('db')
   }, []);
 
   useEffect(() => {
@@ -96,19 +78,7 @@ const Home: React.FC = () => {
   };
 
   const toggleFavorite = async (id: string) => {
-    const chargingPoint = chargingPoints.find((item) => item.id === id);
-    if (!chargingPoint) return;
-
-    const updatedIsFav = !chargingPoint.isFav;
-
-    const db = await getDBConnection();
-    await updateFavoriteStatus(db, id, updatedIsFav);
-
-    setChargingPoints((prevChargingPoints) =>
-      prevChargingPoints.map((item) =>
-        item.id === id ? { ...item, isFav: updatedIsFav } : item
-      )
-    );
+    console.log('db')
   };
 
   const getImageSource = (status: string) => {

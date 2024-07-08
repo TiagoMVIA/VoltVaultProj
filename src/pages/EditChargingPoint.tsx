@@ -6,7 +6,6 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 import DropDown from 'react-native-paper-dropdown';
 import TypeList from '../mock/TypeList.json';
 import StatusList from '../mock/StatusList.json';
-import { getDBConnection, updateChargingPoint } from '../database/Database';
 
 LogBox.ignoreLogs(['Warning: TextInput.Icon: Support for defaultProps']);
 
@@ -23,24 +22,12 @@ const EditChargingPoint = () => {
   const [type, setType] = useState(item.type);
   const [visible, setVisible] = useState(false);
 
-  const handleEditChargingPoint = async () => {
-    try {
-      const db = await getDBConnection();
-      await updateChargingPoint(db, item.id, location, type, status);
-      navigation.navigate('Home');
-    } catch (error) {
-      console.error("Error editing charging point:", error);
-    }
+  const handleEditChargingPoint = () => {
+    console.log('bd')
   };
 
-  const handleDeleteChargingPoint = async () => {
-    try {
-      const db = await getDBConnection();
-      await db.executeSql(`DELETE FROM ChargingPoints WHERE id = ?`, [item.id]);
-      navigation.navigate('Home');
-    } catch (error) {
-      console.error("Error deleting charging point:", error);
-    }
+  const handleDeleteChargingPoint = () => {
+    console.log('bd')
   };
 
   const showDialog = () => setVisible(true);
